@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Access-Control-Allow-Origin" content="http://www.pivotaltracker.com">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+    <body id="app">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header>
+            <h1>Piviotal Tracker</h1>
+
+            <nav class="main">
+                <ul>
+                    <li class="activity"><a href="#" alt="Not implemented">Activity</a></li>
+                    <li class="projects"><a href="#">Projects</a></li>
+                </ul>
+            </nav>
+
+            <nav class="auth">
+                <ul>
+                    <li class="login"><a href="#">Login</a></li>
+                    <li class="logout"><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="container">
+
+        </div>
+
+
+        <!-- Templates -->
+
+        <!-- Login State -->
+        <script type="text/template" id="login-template">
+            <div class="login">
+            <h2>Login</h2>
+                <% if(typeof(error) !== "undefined"){ %>
+                    <div class="error">
+                        <%- error %>
+                    </div>
+                <% } %>
+                <form>
+                    <fieldset>
+                        <label>Username</label>
+                        <input type="text" name="username" value="<%- username %>" />
+                        
+                    </fieldset>
+
+                    <fieldset>
+                        <label>Password</label>
+                        <input type="password" name="password" value="<%- password %>" />
+                        
+                    </fieldset>
+                    <button>Login</button>
+                </form>
+            </div>
+        </script>
+
+        <!-- Projects State -->
+        <script type="text/template" id="projects-template">
+            <div class="projects">
+                <h2>Projects</h2>
+
+                <% if(typeof(projects) !== "undefined"){ %>
+                    <div class="list">
+                        <% for(var i in projects){ %>
+                            <div class="project" id="project-<%- projects[i].id %>">
+                                <a href="#">
+                                    <h3><%- projects[i].name %></h3>
+                                    <p><%- projects[i].account %></p>
+                                </a>
+                                
+                                
+                            </div>
+                        <% } %>
+                    </div>
+                <% } %>
+            </div>
+        </script>
+
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+        <script src="js/vendor/json2.js"></script>
+        <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/vendor/backbone-min.js"></script>
+        
+        
+        <script src="js/plugins.js"></script>
+        <script src="js/main-ck.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    -->
+
+    </body>
+</html>

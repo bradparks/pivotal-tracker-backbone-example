@@ -1,0 +1,100 @@
+@font: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+@linkColor: #DF1E5E;
+
+body
+{
+	text-align: center;
+	font-family: @font;
+}
+
+a
+{
+	color: @linkColor;
+}
+
+header
+{
+
+	nav
+	{
+		ul
+		{
+			padding-left: 0;
+			padding-right: 0;
+
+			li
+			{
+				margin-left: 0;
+			}
+		}
+	}
+
+	.main
+	{
+
+		ul
+		{
+			li.activity
+			{
+				text-decoration:line-through;
+			}
+		}
+	}
+}
+
+.login
+{
+	.error
+	{
+		color: @linkColor;
+	}
+
+	label
+	{
+		display: block;
+	}
+
+	input
+	{
+		background-color: #000;
+		margin: 0;
+		border: 0;
+		color: #FFF;
+		text-align: center;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-size: 0.8em;
+		font-family: @font;
+	}
+
+	input[name="username"]
+	{
+		margin-bottom: 10px;
+	}
+
+	button
+	{
+		margin-top: 10px;
+		font-family: @font;
+	}
+}
+
+.projects
+{
+	.list
+	{
+		.project
+		{
+			h3
+			{
+				margin-bottom: 0;
+				margin-bottom: 0;
+			}
+
+			p
+			{
+				margin-top: 0;
+			}
+		}
+	}
+}
